@@ -15,8 +15,6 @@ import {z} from 'zod';
 import {zodResolver} from '@hookform/resolvers/zod';
 import { useHistory } from 'react-router-dom';
 
-import './home.css';
-
 const options: RadioOption[] = [
     {
 	name: 'Often True',
@@ -112,7 +110,7 @@ export const Home: React.FC = () => {
 	    />
 
 	    <IonText>
-		<h2 style={{marginBottom: 0}} className='ion-text-center'>
+		<h2 style={{fontSize: '1.2rem', marginBottom: 0}} className='ion-text-center'>
 		    Want to learn more?
 		</h2>
 		<p style={{marginTop: 0}}>
