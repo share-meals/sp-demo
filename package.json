@@ -30,6 +30,7 @@
         "react-hook-form": "^7.48.2",
         "react-router": "^5.3.4",
         "react-router-dom": "^5.3.4",
+        "terser": "^5.25.0",
         "zod": "^3.22.4"
     },
     "devDependencies": {
@@ -46,7 +47,6 @@
         "eslint": "^8.35.0",
         "eslint-plugin-react": "^7.32.2",
         "jsdom": "^22.1.0",
-        "terser": "^5.4.0",
         "typescript": "^5.1.6",
         "vite": "^4.3.9",
         "vitest": "^0.32.2"

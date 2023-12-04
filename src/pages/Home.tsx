@@ -50,26 +50,25 @@ export const Home: React.FC = () => {
 	handleSubmit,
 	formState: { errors, isValid},
     } = useForm<z.infer<typeof schema>>({
-        mode: 'onChange',
+        mode: 'onBlur',
         resolver: zodResolver(schema)
     });
 
     const onSubmit = handleSubmit((response) => {
-	//startLoading();
+	startLoading();
 	fetch('https://vendrequest-dr7r4rzeoa-uc.a.run.app', {
-	    method: 'GET',
-	    /*
+	    mode: 'no-cors',
+	    method: 'POST',
 	    headers: {
-		'Content-Type': 'application/json'
+		'Content-Type': 'application/json',
 	    },
 	    body: JSON.stringify(response)
-	    */
 	}).then(() => {
-	    //stopLoading();
+	    stopLoading();
 	    history.push('/complete');
 	}).catch((error) => {
 	    // todo: toast error
-	    //stopLoading();
+	    stopLoading();
 	    history.push('/complete');
 	});
     });
